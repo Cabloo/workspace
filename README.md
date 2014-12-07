@@ -1,4 +1,10 @@
 My Workspace (work in progress)
 =========
 
-Install script for my workspace setup using Atom, Terminator, and optionally Vagrant.
+A collection of scripts I use for my workspace.
+
+In Progress:
+=========
+- Atom scripts
+- Other git shortcuts and utilities
+- Vagrant utilities
