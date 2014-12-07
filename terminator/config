@@ -1,0 +1,64 @@
+[global_config]
+  enabled_plugins = CustomCommandsMenu, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  suppress_multiple_term_dialog = True
+[keybindings]
+[profiles]
+  [[default]]
+    use_system_font = False
+    font = Monospace 9
+    background_image = None
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+  [[workspace]]
+    [[[child0]]]
+      position = 967:203
+      type = Window
+      order = 0
+      parent = ""
+      size = 722, 454
+    [[[child1]]]
+      position = 361
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[child2]]]
+      position = 227
+      type = VPaned
+      order = 0
+      parent = child1
+    [[[child5]]]
+      position = 227
+      type = VPaned
+      order = 1
+      parent = child1
+    [[[terminal3]]]
+      profile = default
+      command = /workspace/terminator/terminator.sh 4
+      type = Terminal
+      order = 0
+      parent = child2
+    [[[terminal4]]]
+      profile = default
+      command = /workspace/terminator/terminator.sh 3
+      type = Terminal
+      order = 1
+      parent = child2
+    [[[terminal7]]]
+      profile = default
+      command = /workspace/terminator/terminator.sh 2
+      type = Terminal
+      order = 1
+      parent = child5
+    [[[terminal6]]]
+      profile = default
+      command = /workspace/terminator/terminator.sh 1
+      type = Terminal
+      order = 0
+      parent = child5
+[plugins]

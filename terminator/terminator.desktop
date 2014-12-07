@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Workspace
+GenericName=Workspace
+Comment=Initiate Workspace in Terminator
+TryExec=terminator
+Exec=terminator -m -T "Workspace" -l workspace %U
+Icon=terminator
+Type=Application
+Categories=Terminal;Workspace

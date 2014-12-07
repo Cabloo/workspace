@@ -1,0 +1,27 @@
+#!/bin/bash
+
+scripts_dir="~/scripts/python/"
+
+head=$(git ls-remote --get-url origin | cut -d':' -f 2 | head -c -4)
+branch=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+commit=$(git log -1 HEAD --pretty=format:%s)
+if [ "$branch" = "" ]; then
+	echo "No branch chosen"
+	exit 0
+fi
+
+push="$(git push origin $branch 2>&1)"
+echo "===="
+echo "git push origin $branch"
+echo "$push"
+echo "===="
+if [ "$push" = "Everything up-to-date" ]; then
+	echo "Nothing to create pull request for"
+#	exit 0
+fi
+
+# Get first non-origin remote
+remote_name=$(git remote | sed "/origin/d" | head -n 1)
+remote=$(git ls-remote --get-url "$remote_name" | cut -d':' -f 2 | head -c -5)
+
+python "$scripts_dir"gitpr.py "$head" "$branch" "$commit" "$remote"
