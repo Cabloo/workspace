@@ -1,15 +1,15 @@
 #!/bin/bash
 
-cd /home/zane/repos/tms/workspace/terminator
+cd {DIR}
 
 case $1 in
     1)
-        echo "Connecting to Vagrant via SSH...";
-        vagrant up && vagrant ssh
+        echo "Connecting to production via SSH...";
+        #ssh root@someserver
     ;;
     2)
         echo "Connecting to production via SSH...";
-        # TODO: Vagrant SSH
+        #ssh root@someserver
     ;;
     4)
         echo "Workspace initiated.";

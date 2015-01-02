@@ -1,13 +1,7 @@
 Setup:
 =======
-- Copy config.sample to config
-- (Optional) Personalize terminator.desktop and drag to sidebar
-- (Optional) modify config
-- Run install.sh
-- Modify commands in terminator.sh
-
-The config file is automatically symlinked to terminator's config file, so changes to it will occur in terminator on the next start.
-
+- Run `install.sh`
+- Modify commands in `terminator.sh`
 
 TODO:
 ======
